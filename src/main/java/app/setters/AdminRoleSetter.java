@@ -1,12 +1,9 @@
 package app.setters;
 
 import app.entities.User;
-import app.services.UserService;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
-import java.util.HashSet;
 
 
 @Component

@@ -3,7 +3,6 @@ package app;
 import app.controllers.PassengerRESTController;
 import app.entities.Passenger;
 import app.services.PassengerService;
-import app.services.UserService;
 import app.util.LoginSuccessHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
