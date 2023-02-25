@@ -1,6 +1,5 @@
 package app.setters;
 
-import app.entities.User;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
