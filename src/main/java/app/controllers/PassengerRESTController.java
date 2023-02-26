@@ -1,13 +1,14 @@
 package app.controllers;
 
 import app.entities.Passenger;
+import app.entities.User;
 import app.services.PassengerService;
+import app.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import java.security.Principal;
 import java.util.Optional;
 
 @RestController
@@ -15,14 +16,17 @@ import java.util.Optional;
 public class PassengerRESTController {
     private final PassengerService passengerService;
 
+    private final UserService userService;
+
     @Autowired
-    public PassengerRESTController(PassengerService passengerService) {
+    public PassengerRESTController(PassengerService passengerService, UserService userService) {
         this.passengerService = passengerService;
+        this.userService = userService;
     }
 
     @GetMapping()
-    public ResponseEntity<List<Passenger>> getAllPassengers() {
-        return ResponseEntity.ok(passengerService.getAllPassenger());
+    public ResponseEntity<User> getUser(Principal principal) {
+        return new ResponseEntity<>(userService.findByEmail(principal.getName()), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
