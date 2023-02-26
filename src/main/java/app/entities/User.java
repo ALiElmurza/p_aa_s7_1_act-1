@@ -42,7 +42,7 @@ import java.util.HashSet;
 @Entity
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class User implements UserDetails{
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -139,5 +139,4 @@ public class User implements UserDetails{
         }
         roles.add(role);
     }
-
 }
