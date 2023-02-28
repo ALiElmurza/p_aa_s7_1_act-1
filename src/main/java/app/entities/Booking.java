@@ -15,8 +15,8 @@ public class Booking {
 
     private Long bookingNumber;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "booking")
-//    private List<Passenger> passengers;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "booking")
+    private List<Passenger> passengers;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "contact_person_id", referencedColumnName = "id")

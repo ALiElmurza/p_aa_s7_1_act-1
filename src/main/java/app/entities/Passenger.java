@@ -68,9 +68,9 @@ public class Passenger extends User {
 //    private Ticket ticket;
 
 
-//    @ManyToOne
-//    @JoinColumn(name = "booking_id")
-//    private Booking booking;
+    @ManyToOne
+    @JoinColumn(name = "booking_id")
+    private Booking booking;
 
     /////
 
